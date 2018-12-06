@@ -1,4 +1,4 @@
-# 部屋の広さと家賃の関係を単回帰分析で表してみよう（y=ax)
+### 部屋の広さと家賃の関係を単回帰分析で表してみよう（y=ax)
 # まずは具体例でパラメータ a を算出
 
 # Numpyライブラリをインポート
@@ -22,3 +22,24 @@ xy.sum()
 a = xy.sum() / xx.sum()
 # 出力
 print(a)
+
+
+### PandasとMatpltlibの学習 ###
+
+# Pandasライブラリの読み込み
+import pandas as pd
+# CSVの読み込み
+# df:data frame
+df = pd.read_csv("sample.csv")
+# 一部分だけ表示する（.head使う！）
+print(df.head(3))
+
+# データの抽出
+x = df["x"]
+y = df["y"]
+
+# Matplotlibの読み込み
+import matplotlib.pyplot as plt
+# 横軸x, 縦軸yを散布図（scatter）でプロット
+plt.scatter(x, y)
+plt.show()
